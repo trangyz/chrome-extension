@@ -1,10 +1,12 @@
 {
     "name": "Rainbowld",
     "version": "3.0",
-
     "manifest_version": 3,
     "description": "Colorfy and boldify your life",
     "author": "Garrett and Trang",
+    "action": {
+        "default_icon": "Rainbowld - Copy.png"
+    },
     "content_scripts":
     [
         {
