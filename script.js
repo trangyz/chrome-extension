@@ -53,7 +53,9 @@ const elements = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, capti
 elements.forEach(element => {
     Array.from(element.childNodes).forEach(child => {
         if (child.nodeType === 3) { // Check if the node is a text node
-            let modifiedText = child.nodeValue.replace(/\b(\w)/g, '<b>$1</b>');
+            // create a random color to add during the bold phase
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            let modifiedText = child.nodeValue.replace(/\b(\w)/g, `<b style = "color: #${randomColor}" >$1</b>`);
             let tempDiv = document.createElement('div');
             tempDiv.innerHTML = modifiedText;
 
